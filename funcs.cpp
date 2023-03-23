@@ -63,14 +63,29 @@ void white_line(int image[MAX_H][MAX_W], int& h, int& w){
 
 void twice(int image[MAX_H][MAX_W], int& h, int& w){
     int scale[MAX_H][MAX_W];
-    for(int row = 0; row < h; row += 2){
-        for (int column = 0; column < w; column += 2){
-            scale[row][column] = image[row/2][column/2];
-            scale[row][column + 1] = image[row/2][column/2];
-            scale[row + 1][column] = image[row/2][column/2];
-            scale[row + 1][column + 1] = image[row/2][column/2];
+    for(int row = 0; row < h; row ++){
+        for (int column = 0; column < w; column ++){
+            scale[row * 2][column * 2] = image[row][column];
+            scale[row * 2 + 1][column * 2] = image[row][column];
+            scale[row * 2][column * 2 + 1] = image[row][column];
+            scale[row * 2 + 1][column * 2 + 1] = image[row][column];
         }
     }
     
-    writeImage("taskE.pgm", scale, h, w);
+    writeImage("taskE.pgm", scale, h * 2, w * 2);
+}
+
+void pixel(int image[MAX_H][MAX_W], int& h, int& w){
+	int pixelate[MAX_H][MAX_W];
+    for(int row = 0; row < h; row += 2){
+        for (int column = 0; column < w; column += 2){
+			int x = (image[row][column] + image[row][column + 1] + image[row + 1][column] + image[row + 1][column + 1])/4;
+            pixelate[row][column] = x;
+            pixelate[row][column + 1] = x;
+            pixelate[row + 1][column] = x;
+            pixelate[row + 1][column + 1] = x;
+        }
+    }
+    
+    writeImage("taskF.pgm", pixelate, h, w);
 }

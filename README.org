@@ -6,7 +6,7 @@
 
 * GitHub username: JoseG777
 
-* Notes:
+* Notes: I used inImage.pgm (provided from Genady's lab 8 instructions) to test my code
 
 
   

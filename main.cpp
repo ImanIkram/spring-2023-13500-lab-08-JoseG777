@@ -9,26 +9,22 @@
 int main(){
     int image[MAX_H][MAX_W];
     int h, w;
-    readImage("image1.pgm", image, h, w);
+    readImage("inImage.pgm", image, h, w);
+
     invert(image, h, w);
     
-    int image1[MAX_H][MAX_W];
-    int h1, w1;
-    readImage("image1.pgm", image1, h1, w1);
-    invert_half(image1, h1, w1);
+    //readImage("inImage.pgm", image, h, w);
+    invert_half(image, h, w);
     
-    int image2[MAX_H][MAX_W];
-    int h2, w2;
-    readImage("image1.pgm", image2, h2, w2);
-    white_box(image2, h2, w2);
+  
+    //readImage("inImage.pgm", image, h, w);
+    white_box(image, h, w);
 
-    int image3[MAX_H][MAX_W];
-    int h3, w3;
-    readImage("image1.pgm", image3, h3, w3);
-    white_line(image3, h3, w3);
+    //readImage("inImage.pgm", image, h, w);
+    white_line(image, h, w);
 
-    int image4[MAX_H][MAX_W];
-    int h4, w4;
-    readImage("image1.pgm", image4, h4, w4);
-    twice(image4, h4, w4);
+    //readImage("inImage.pgm", image, h, w);
+    twice(image, h, w);
+
+    pixel(image, h, w);
 }
