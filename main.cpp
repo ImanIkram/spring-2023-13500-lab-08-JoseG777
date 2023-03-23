@@ -13,17 +13,12 @@ int main(){
 
     invert(image, h, w);
     
-    //readImage("inImage.pgm", image, h, w);
     invert_half(image, h, w);
     
-  
-    //readImage("inImage.pgm", image, h, w);
     white_box(image, h, w);
 
-    //readImage("inImage.pgm", image, h, w);
     white_line(image, h, w);
 
-    //readImage("inImage.pgm", image, h, w);
     twice(image, h, w);
 
     pixel(image, h, w);
