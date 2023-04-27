@@ -46,7 +46,7 @@ void white_box(int image[MAX_H][MAX_W], int& h, int& w){
 	writeImage("taskC.pgm", wbox, h, w);
 }
 
-void white_line(int image[MAX_H][MAX_W], int& h, int& w){
+void white_frame(int image[MAX_H][MAX_W], int& h, int& w){
     int wline[MAX_H][MAX_W];
 	for(int row = 0; row < h; row++){
 		for (int column = 0; column < w; column++){
@@ -61,7 +61,7 @@ void white_line(int image[MAX_H][MAX_W], int& h, int& w){
 	writeImage("taskD.pgm", wline, h, w);
 }
 
-void twice(int image[MAX_H][MAX_W], int& h, int& w){
+void scale(int image[MAX_H][MAX_W], int& h, int& w){
     int scale[MAX_H][MAX_W];
     for(int row = 0; row < h; row ++){
         for (int column = 0; column < w; column ++){
